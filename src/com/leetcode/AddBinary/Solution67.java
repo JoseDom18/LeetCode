@@ -29,9 +29,37 @@ public class Solution67 {
 	}
 
 	public static String addBinary(String a, String b) {
-		String ls;
+		char acarreo = ' '; // se vuelve uno si la suma es 1 + 1
+		String ls = ""; // respuesta
+		String maximo = a; // determina el string de mayor tamaño
+		String minimo = b;
+		String suma;
 		
-		a.ch
+		// determinar string mas grande
+		if (b.length() > maximo.length()) {
+			maximo = b;
+			minimo = a;
+		}
+		
+		// crear punteros
+		int punteroMaximo = maximo.length() - 1;
+		int punteroMinimo = minimo.length() - 1;
+
+		while (true) {
+			if(maximo.charAt(punteroMaximo) != minimo.charAt(punteroMinimo)) {
+				if (maximo.charAt(punteroMaximo) == 1 && minimo.charAt(punteroMinimo) == 1) {
+					acarreo = '1';
+				}
+				ls += "1";
+				punteroMaximo--;
+				punteroMinimo--;
+			} else {
+				ls += "0";
+				punteroMaximo--;
+				punteroMinimo--;
+			}
+			
+		}
 		
 		
 		return ls;
