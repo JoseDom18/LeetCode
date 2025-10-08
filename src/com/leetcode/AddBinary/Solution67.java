@@ -6,8 +6,6 @@ public class Solution67 {
 		// TODO Auto-generated method stub
 //		Given two binary strings a and b, return their sum as a binary string.
 //
-//				 
-//
 //				Example 1:
 //
 //				Input: a = "11", b = "1"
@@ -16,7 +14,6 @@ public class Solution67 {
 //
 //				Input: a = "1010", b = "1011"
 //				Output: "10101"
-//				 
 //
 //				Constraints:
 //
@@ -36,7 +33,7 @@ public class Solution67 {
 		String suma;
 		
 		// determinar string mas grande
-		if (b.length() > maximo.length()) {
+		if (minimo.length() > maximo.length()) {
 			maximo = b;
 			minimo = a;
 		}
@@ -58,11 +55,7 @@ public class Solution67 {
 				punteroMaximo--;
 				punteroMinimo--;
 			}
-			
 		}
-		
-		
 		return ls;
 	}
-
 }
