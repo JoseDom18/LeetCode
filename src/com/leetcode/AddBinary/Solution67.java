@@ -26,7 +26,7 @@ public class Solution67 {
 	}
 
 	public static String addBinary(String a, String b) {
-		char acarreo = ' '; // se vuelve uno si la suma es 1 + 1
+		char acarreo = '0'; // se vuelve uno si la suma es 1 + 1
 		String ls = ""; // respuesta
 		String maximo = a; // determina el string de mayor tamaño
 		String minimo = b;
@@ -39,23 +39,30 @@ public class Solution67 {
 		}
 		
 		// crear punteros
-		int punteroMaximo = maximo.length() - 1;
-		int punteroMinimo = minimo.length() - 1;
+		int punteroMaximo = maximo.length();
+		int punteroMinimo = minimo.length();
 
-		while (true) {
-			if(maximo.charAt(punteroMaximo) != minimo.charAt(punteroMinimo)) {
-				if (maximo.charAt(punteroMaximo) == 1 && minimo.charAt(punteroMinimo) == 1) {
-					acarreo = '1';
-				}
-				ls += "1";
-				punteroMaximo--;
-				punteroMinimo--;
-			} else {
-				ls += "0";
-				punteroMaximo--;
-				punteroMinimo--;
+		// ciclo
+		for(int i = punteroMaximo - 1; i < punteroMaximo; i++) {
+			for(int j = punteroMinimo -1; j >= 0; j--) {
+				
 			}
 		}
+
+//		while (true) {
+//			if(maximo.charAt(punteroMaximo) != minimo.charAt(punteroMinimo)) {
+//				if (maximo.charAt(punteroMaximo) == 1 && minimo.charAt(punteroMinimo) == 1) {
+//					acarreo = '1';
+//				}
+//				ls += "1";
+//				punteroMaximo--;
+//				punteroMinimo--;
+//			} else {
+//				ls += "0";
+//				punteroMaximo--;
+//				punteroMinimo--;
+//			}
+//		}
 		return ls;
 	}
 }
