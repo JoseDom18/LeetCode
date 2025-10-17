@@ -26,10 +26,19 @@ public class Solution69 {
 //				Constraints:
 //
 //				0 <= x <= 231 - 1
+		int x = 4;
+		System.out.printf("Repuesta: %d", mySqrt(x));
+		
+		
 
 	}
 
 	public static int mySqrt(int x) {
+		int ls = 0;
+		while ((ls + 1)<= x / (ls + 1)) {
+			ls++;
+		}
+		return ls;
 		
 	}
 
